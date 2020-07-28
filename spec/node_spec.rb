@@ -1,5 +1,4 @@
 require './app/node.rb'
-
 describe Node do
   it 'exists' do
     node = Node.new('Keller')
