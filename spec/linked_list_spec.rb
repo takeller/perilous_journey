@@ -15,11 +15,17 @@ describe LinkedList do
 
   it '.append' do
     list = LinkedList.new
-    
+
     list.append('Keller')
 
     expect(list.head).to be_a(Node)
     expect(list.head.next_node).to eq(nil)
+
+    list.append('Doherty')
+
+    expect(list.head.next_node).to be_a(Node)
+    expect(list.head.next_node.surname).to eq('Doherty')
+    expect(list.head.next_node.next_node).to eq(nil)
   end
 
   it '.count' do
